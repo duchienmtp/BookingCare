@@ -1,0 +1,62 @@
+@baseUrl = http://localhost:8080/api
+
+###
+
+POST {{baseUrl}}/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "example@example.com",
+    "password": "123456"
+}
+
+###
+
+GET {{baseUrl}}/get-all-users?id=ALL HTTP/1.1
+
+###
+
+POST {{baseUrl}}/create-new-user HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "hoidanit@gmail.com",
+    "password": "123456",
+    "firstName": "John",
+    "lastName": "Stone",
+    "address": "Hà Nội",
+    "phoneNumber": "12344444",
+    "gender": "N",
+    "roleId": "R1",
+    "positionId": "P4"
+}
+
+###
+
+PUT {{baseUrl}}/edit-user HTTP/1.1
+Content-Type: application/json
+
+{
+    "id": "6",
+    "firstName": "John",
+    "lastName": "Stone",
+    "address": "Hanoi",
+    "phoneNumber": "12344444"
+}
+
+###
+DELETE {{baseUrl}}/delete-user HTTP/1.1
+Content-Type: application/json
+
+{
+    "id": "7"
+}
+
+###
+GET {{baseUrl}}/top-doctor-home HTTP/1.1
+
+###
+GET {{baseUrl}}/get-all-doctors HTTP/1.1
+
+###
+GET {{baseUrl}}/get-detail-doctor-by-id?id=6 HTTP/1.1
